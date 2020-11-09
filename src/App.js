@@ -1,30 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "./app.css";
-import Game from "./components/Game";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Result from "./components/Result";
 
 function App() {
-  useEffect(() => {
-    window.addEventListener("mousedown", function () {
-      document.body.classList.add("mouse-navigation");
-      document.body.classList.remove("kbd-navigation");
-    });
-    window.addEventListener("keydown", function (e) {
-      if (e.key === "Tab") {
-        document.body.classList.add("kbd-navigation");
-        document.body.classList.remove("mouse-navigation");
-      }
-    });
-    window.addEventListener("click", function (e) {
-      if (e.target.tagName === "A" && e.target.getAttribute("href") === "#") {
-        e.preventDefault();
-      }
-    });
-  }, []);
+  const [grams, setGrams] = useState(null);
+  const [food, setFood] = useState(null);
+  const [result, setResult] = useState(null);
 
   return (
-    <div className="app">
-      <Game />
-    </div>
+    <>
+      <Header />
+      <Form
+        grams={grams}
+        setGrams={setGrams}
+        food={food}
+        setFood={setFood}
+        result={result}
+        setResult={setResult}
+      />
+      <Result result={result} setResult={setResult} />
+    </>
   );
 }
 
