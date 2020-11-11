@@ -25,15 +25,19 @@ function Form({ grams, setGrams, food, setFood, result, setResult }) {
         <input
           placeholder="Wie viel ist übrig? (in g)"
           type="number"
-          step={0.1}
+          min="1"
+          max="99"
+          step={1}
           value={grams}
           onChange={gramsHandler}
         ></input>
         <div>
           <select onChange={foodHandler}>
             <option value="">Und wovon?</option>
-            <option value="0.5">Brot</option>
-            <option value="0.7">Kartoffeln</option>
+            <option value="0.75">Nudeln</option>
+            <option value="0.5">Weißbrot</option>
+            <option value="0.2">Reis</option>
+            <option value="0.13">Kartoffelpüree</option>
           </select>
           <button type="submit" onClick={submitHandler} name="amount">
             Bär mich auf!

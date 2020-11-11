@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <header>
-        <div>Tare Bears 🐻</div>
+        <div>TareBears 🐻</div>
       </header>
     </>
   );
