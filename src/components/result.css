@@ -1,0 +1,50 @@
+.resultContainer {
+  background: linear-gradient(160deg, var(--white), var(--light));
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  padding: 2rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 1rem 1rem var(--dark-shade);
+}
+
+.resultSymbols {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lilita One", cursive;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.textRed {
+  color: var(--gb-red);
+  -webkit-text-stroke: 1px var(--gb-red-outline);
+  text-shadow: 0 0 0.6rem var(--dark);
+}
+
+.textGreen {
+  color: var(--gb-green);
+  -webkit-text-stroke: 1px var(--gb-green-outline);
+  text-shadow: 0 0 0.6rem var(--dark);
+}
+
+.textWhite {
+  color: var(--gb-white);
+  -webkit-text-stroke: 1px var(--gb-white-outline);
+  text-shadow: 0 0 0.6rem var(--dark);
+}
+
+.textYellow {
+  color: var(--gb-yellow);
+  -webkit-text-stroke: 1px var(--gb-yellow-outline);
+  text-shadow: 0 0 0.6rem var(--dark);
+}
+
+.textOrange {
+  color: var(--gb-orange);
+  -webkit-text-stroke: 1px var(--gb-orange-outline);
+  text-shadow: 0 0 0.6rem var(--dark);
+}
