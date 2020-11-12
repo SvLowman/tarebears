@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./app.css";
+import "./global.css";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Result from "./components/Result";
+import Footer from "./components/Footer";
 
 function App() {
   const [grams, setGrams] = useState(null);
@@ -21,6 +23,7 @@ function App() {
         setResult={setResult}
       />
       <Result result={result} setResult={setResult} />
+      <Footer />
     </>
   );
 }
