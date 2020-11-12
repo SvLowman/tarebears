@@ -1,0 +1,8 @@
+header {
+  color: var(--white);
+}
+
+.title {
+  text-align: center;
+  font-family: "Lilita One", cursive;
+}

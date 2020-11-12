@@ -1,0 +1,77 @@
+form {
+  background: linear-gradient(160deg, var(--main-bg-analogon), var(--main-bg));
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 1rem 1rem var(--dark-shade);
+}
+
+.dataInput {
+  background: linear-gradient(160deg, var(--sec-bg-analogon), var(--sec-bg));
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: auto;
+  display: flex;
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.inputSize {
+  margin-left: 1rem;
+}
+
+input,
+select {
+  background: linear-gradient(160deg, var(--white), var(--light));
+  border-radius: 20px;
+  padding: 0.5rem;
+  border: none;
+  box-shadow: 0 0 1rem var(--sec-bg-shade);
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  width: 80%;
+}
+
+select {
+  margin: 1rem;
+}
+
+.select-css::-ms-expand {
+  display: none;
+}
+
+button {
+  background: linear-gradient(160deg, var(--white), var(--light));
+  width: auto;
+  border: solid 1px var(--white);
+  border-radius: 20px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Lilita One", cursive;
+  font-size: 1.5rem;
+  box-shadow: 0 0 1rem var(--main-bg-shade);
+  color: var(--dark-shade);
+}
+
+.buttonPic {
+  height: 50px;
+  margin: 0.5rem 0;
+}
+
+.buttonText {
+  margin-top: 0;
+}
