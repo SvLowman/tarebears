@@ -5,7 +5,7 @@ import "./splashpage.css";
 function SplashPage() {
   return (
     <div className="splashContainer">
-      <h1 className="title">TareBears</h1>
+      <h1 className="supratitle">TareBears</h1>
       <div className="splashLogoContainer">
         <img className="splashLogo" src={emojibear} alt="Tär-Bär" />
       </div>

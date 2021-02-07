@@ -1,4 +1,4 @@
-.title {
+.supratitle {
   color: var(--white);
   text-align: center;
   font-family: "Lilita One", cursive;
@@ -10,7 +10,7 @@
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-variant-caps: small-caps;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 
 .splashContainer {
@@ -23,6 +23,7 @@
 
 .splashLogoContainer {
   width: 5rem;
+  margin-bottom: 1rem;
 }
 
 .splashLogo {
