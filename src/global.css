@@ -31,9 +31,10 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-size: 16px;
   background: linear-gradient(180deg, var(--dark-shade), var(--dark));
   font-family: "Montserrat", sans-serif;
   color: var(--dark-shade);
+  width: 360px;
 }

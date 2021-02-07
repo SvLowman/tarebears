@@ -12,7 +12,7 @@ function App() {
   const [result, setResult] = useState(null);
 
   return (
-    <>
+    <div className="all">
       <Header />
       <Form
         grams={grams}
@@ -24,7 +24,7 @@ function App() {
       />
       <Result result={result} setResult={setResult} />
       <Footer />
-    </>
+    </div>
   );
 }
 
