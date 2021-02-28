@@ -2,10 +2,9 @@ import { React, useState } from "react";
 
 // localStorage.setItem("lastname", "Smith");
 
-function ValueForm() {
+function ValueForm({ valueArray, setValueArray }) {
   const [foodType, setFoodType] = useState("");
-  const [contentValue, setContentValue] = useState(null);
-  const [valueArray, setValueArray] = useState([]);
+  const [contentValue, setContentValue] = useState("");
 
   const foodValueHandler = (e) => {
     setFoodType(e.target.value);
@@ -42,10 +41,7 @@ function ValueForm() {
         ></input>
         <input
           placeholder="Kohlenhydratgehalt in g pro 100g"
-          type="number"
-          min="1"
-          max="99"
-          step={1}
+          type="text"
           value={contentValue}
           required={true}
           onChange={contentValueHandler}
