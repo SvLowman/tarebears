@@ -2,8 +2,20 @@ header {
   color: var(--white);
 }
 
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   text-align: center;
   font-family: "Lilita One", cursive;
   font-size: 1.25rem;
+}
+
+.header-logo {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 2rem;
 }

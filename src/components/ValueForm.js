@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import "./valueform.css";
 
 // localStorage.setItem("lastname", "Smith");
 
@@ -31,7 +32,7 @@ function ValueForm({ valueArray, setValueArray }) {
 
   return (
     <>
-      <form>
+      <form className="value-form">
         <input
           placeholder="Nahrungsmittel"
           type="text"
@@ -39,14 +40,21 @@ function ValueForm({ valueArray, setValueArray }) {
           required={true}
           onChange={foodValueHandler}
         ></input>
+        <div className="buffer"></div>
         <input
+          className="value-input"
           placeholder="Kohlenhydratgehalt in g pro 100g"
           type="text"
           value={contentValue}
           required={true}
           onChange={contentValueHandler}
         ></input>
-        <button type="submit" onClick={submitHandler} name="value">
+        <button
+          className="value-button"
+          type="submit"
+          onClick={submitHandler}
+          name="value"
+        >
           Werte speichern
         </button>
       </form>
