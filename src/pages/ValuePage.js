@@ -9,7 +9,6 @@ function ValuePage() {
   return (
     <>
       <Header />
-      <p>😀</p>
       <ValueForm valueArray={valueArray} setValueArray={setValueArray} />
       <ValueDisplay valueArray={valueArray} />
       <Footer />

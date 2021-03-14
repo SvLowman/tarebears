@@ -1,0 +1,16 @@
+.value-form {
+  background: linear-gradient(160deg, var(--ter-bg-analogon), var(--ter-bg));
+}
+
+.buffer {
+  height: 1rem;
+}
+
+.value-input {
+  width: auto;
+  box-shadow: 0 0 1rem var(--ter-bg-shade);
+}
+
+.value-button {
+  box-shadow: 0 0 1rem var(--ter-bg-shade);
+}

@@ -1,17 +1,14 @@
 import React from "react";
 import "./header.css";
-// import styled from "styled-components";
-
-// const header = styled.header`
-//   background: blueviolet;
-// `;
+import emojibear from "../assets/emoji-bear.png";
 
 function Header() {
   return (
     <>
       <header className="title">
-        <div>
-          <h1>TareBears 🐻</h1>
+        <div className="title-container">
+          <h1>TareBears</h1>
+          <img className="header-logo" src={emojibear} alt="Tär-Bär" />
         </div>
       </header>
     </>
