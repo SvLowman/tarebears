@@ -1,6 +1,14 @@
 import React from "react";
-import emojibear from "../assets/emoji-bear.png";
+import emojibeargreen from "../assets/emoji-bear-green.png";
+import emojibearorange from "../assets/emoji-bear-orange.png";
+import emojibearred from "../assets/emoji-bear-red.png";
+// import emojibearwhite from "../assets/emoji-bear-white.png";
+// import emojibearyellow from "../assets/emoji-bear-yellow.png";
 import "./splashpage.css";
+
+const bearArray = [emojibeargreen, emojibearorange, emojibearred];
+const bearNumber = Math.floor(Math.random() * 3);
+const emojibear = bearArray[bearNumber];
 
 function SplashPage() {
   return (
