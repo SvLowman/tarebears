@@ -34,6 +34,7 @@ function ValueForm({ valueArray, setValueArray }) {
     <>
       <form className="value-form">
         <input
+          className="value-input"
           placeholder="Nahrungsmittel"
           type="text"
           value={foodType}
