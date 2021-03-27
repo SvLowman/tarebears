@@ -1,10 +1,17 @@
 footer {
-  color: white;
   text-align: center;
   padding: 1rem;
   background: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  text-decoration: none;
 }
 
 .footerText {
   background: transparent;
+  text-decoration: none;
+  color: white;
 }
