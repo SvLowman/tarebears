@@ -33,23 +33,25 @@ function ValueForm({ valueArray, setValueArray }) {
   return (
     <>
       <form className="value-form">
-        <input
-          className="value-input"
-          placeholder="Nahrungsmittel"
-          type="text"
-          value={foodType}
-          required={true}
-          onChange={foodValueHandler}
-        ></input>
-        <div className="buffer"></div>
-        <input
-          className="value-input"
-          placeholder="Kohlenhydratgehalt in g pro 100g"
-          type="text"
-          value={contentValue}
-          required={true}
-          onChange={contentValueHandler}
-        ></input>
+        <div className="value-input-container">
+          <input
+            className="value-input"
+            placeholder="Nahrungsmittel"
+            type="text"
+            value={foodType}
+            required={true}
+            onChange={foodValueHandler}
+          ></input>
+          <div className="buffer"></div>
+          <input
+            className="value-input"
+            placeholder="Kohlenhydratgehalt in g pro 100g"
+            type="text"
+            value={contentValue}
+            required={true}
+            onChange={contentValueHandler}
+          ></input>
+        </div>
         <button
           className="value-button"
           type="submit"

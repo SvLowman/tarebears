@@ -2,13 +2,26 @@
   background: linear-gradient(160deg, var(--ter-bg-analogon), var(--ter-bg));
 }
 
+.value-input-container {
+  background: linear-gradient(160deg, var(--sec-bg-analogon), var(--sec-bg));
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: auto;
+  display: flex;
+}
+
 .buffer {
   height: 1rem;
+  display: none;
 }
 
 .value-input {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
   width: auto;
-  box-shadow: 0 0 1rem var(--ter-bg-shade);
+  box-shadow: 0 0 1rem var(--sec-bg-shade);
 }
 
 .value-button {
