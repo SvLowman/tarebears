@@ -5,6 +5,7 @@ import "./global.css";
 import SplashPage from "./pages/SplashPage";
 import CalcPage from "./pages/CalcPage";
 import ValuePage from "./pages/ValuePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [splash, setSplash] = useState(true);
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/valuepage">
             <ValuePage />
+          </Route>
+          <Route path="/about">
+            <AboutPage />
           </Route>
         </Switch>
       </Router>
