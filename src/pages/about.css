@@ -1,0 +1,45 @@
+.aboutContainer {
+  max-height: 497px;
+  height: 497px;
+  min-height: 497px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  background: linear-gradient(160deg, var(--sec-bg-analogon), var(--sec-bg));
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.aboutText {
+  color: white;
+}
+
+.aboutText p {
+  margin: 0 0 5px;
+  hyphens: auto;
+}
+
+.valueLink {
+  color: var(--gb-red);
+  text-decoration: none;
+}
+
+.calcLink {
+  color: var(--gb-green);
+  text-decoration: none;
+}
+
+.roundedBottom {
+  background: linear-gradient(160deg, var(--white), var(--light));
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-grow: 1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 1rem 1rem var(--dark-shade);
+}
