@@ -1,5 +1,9 @@
 .aboutContainer {
+  max-height: 497px;
   height: 497px;
+  min-height: 497px;
+  display: flex;
+  flex-direction: column;
 }
 
 .textContainer {
@@ -13,6 +17,11 @@
 
 .aboutText {
   color: white;
+}
+
+.aboutText p {
+  margin: 0 0 5px;
+  hyphens: auto;
 }
 
 .valueLink {
@@ -29,7 +38,7 @@
   background: linear-gradient(160deg, var(--white), var(--light));
   margin-left: 5%;
   margin-right: 5%;
-  padding: 2rem;
+  flex-grow: 1;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 1rem 1rem var(--dark-shade);

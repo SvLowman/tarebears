@@ -11,26 +11,29 @@ function AboutPage() {
       <div className="aboutContainer">
         <div className="textContainer">
           <div className="aboutText">
-            Zu viel Insulin intus?
-            <br />
-            TareBears rechnet Mengen von kohlenhydrathaltigem Essen in ihr
-            Gummibärchen-Äquivalent um. So lassen sich überschüssige
-            Insulinmengen auffagen.
-            <br />
-            Auf der Seite{" "}
-            <Link to="/valuepage" className="valueLink">
-              Meine Werte
-            </Link>{" "}
-            kannst du den Kohlenhydratgehalt von beliebig vielen Lebensmitteln
-            abspeichern.
-            <br />
-            Im{" "}
-            <Link to="/" className="calcLink">
-              Rechner
-            </Link>{" "}
-            kannst du dann auf diese Werte zugreifen und für jede beliebige
-            Menge davon ausrechnen, wie vielen Gummibärchen die darin enthaltnen
-            Kohlenhydrate entspricht.
+            <p>Zu viel Insulin intus?</p>
+            <p>
+              TareBears rechnet grammgenau Mengen von kohlenhydrathaltigem Essen
+              in ihr Gummibärchen-Äquivalent um. So lassen sich überschüssige
+              Insulinmengen auffangen.
+            </p>
+            <p>
+              Auf der Seite{" "}
+              <Link to="/valuepage" className="valueLink">
+                Meine Werte
+              </Link>{" "}
+              kannst du den Kohlenhydratgehalt von beliebig vielen Lebensmitteln
+              abspeichern.
+            </p>
+            <p>
+              Im{" "}
+              <Link to="/" className="calcLink">
+                Rechner
+              </Link>{" "}
+              kannst du dann auf diese Werte zugreifen und für jede beliebige
+              Menge davon ausrechnen, wie vielen Gummibärchen die darin
+              enthaltenen Kohlenhydrate entspricht.
+            </p>
           </div>
         </div>
         <div className="roundedBottom"></div>
