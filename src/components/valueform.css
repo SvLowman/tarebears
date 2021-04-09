@@ -1,5 +1,6 @@
 .value-form {
   background: linear-gradient(160deg, var(--ter-bg-analogon), var(--ter-bg));
+  flex: 0;
 }
 
 .value-input-container {

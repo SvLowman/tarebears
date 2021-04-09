@@ -12,15 +12,17 @@ function CalcPage() {
   return (
     <>
       <Header />
-      <Form
-        grams={grams}
-        setGrams={setGrams}
-        food={food}
-        setFood={setFood}
-        result={result}
-        setResult={setResult}
-      />
-      <Result result={result} setResult={setResult} />
+      <div className="calcContainer">
+        <Form
+          grams={grams}
+          setGrams={setGrams}
+          food={food}
+          setFood={setFood}
+          result={result}
+          setResult={setResult}
+        />
+        <Result result={result} setResult={setResult} />
+      </div>
       <Footer />
     </>
   );
