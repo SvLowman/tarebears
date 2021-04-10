@@ -6,6 +6,7 @@ import "./valueform.css";
 function ValueForm({ valueArray, setValueArray }) {
   const [foodType, setFoodType] = useState("");
   const [contentValue, setContentValue] = useState("");
+  const [dualBolus, setDualBolus] = useState(false);
 
   const foodValueHandler = (e) => {
     setFoodType(e.target.value);
@@ -17,6 +18,11 @@ function ValueForm({ valueArray, setValueArray }) {
     console.log(contentValue);
   };
 
+  const dualBolusHandler = () => {
+    setDualBolus(!dualBolus);
+    console.log(dualBolus);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     // let currentValues = JSON.parse(localStorage.getItem("valuesArray") || []);
@@ -25,14 +31,14 @@ function ValueForm({ valueArray, setValueArray }) {
     // console.log(currentValues);
     setValueArray([
       ...valueArray,
-      { foodType: foodType, contentValue: contentValue },
+      { foodType: foodType, contentValue: contentValue, dualBolus: dualBolus },
     ]);
     console.log(valueArray);
   };
 
   return (
     <>
-      <form className="value-form">
+      <form className="value-form" onSubmit={submitHandler}>
         <div className="value-input-container">
           <input
             className="value-input"
@@ -42,7 +48,6 @@ function ValueForm({ valueArray, setValueArray }) {
             required={true}
             onChange={foodValueHandler}
           ></input>
-          <div className="buffer"></div>
           <input
             className="value-input"
             placeholder="Kohlenhydratgehalt in g pro 100g"
@@ -51,11 +56,21 @@ function ValueForm({ valueArray, setValueArray }) {
             required={true}
             onChange={contentValueHandler}
           ></input>
+          <div className="dual-bolus-container">
+            <input
+              className="dual-bolus-checkbox"
+              type="checkbox"
+              id="dual-bolus"
+              value={dualBolus}
+              onChange={dualBolusHandler}
+            ></input>
+            <label htmlFor="dual-bolus">Dual-Bolus aktivieren</label>
+          </div>
         </div>
         <button
           className="value-button"
           type="submit"
-          onClick={submitHandler}
+          value="Submit"
           name="value"
         >
           Werte speichern
