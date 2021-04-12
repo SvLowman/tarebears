@@ -4,10 +4,13 @@ import "./valuedisplay.css";
 function ValueDisplay({ valueArray, setValueArray }) {
   console.log(valueArray);
 
-  const removeHandler = (index) => {
-    let newValueArray = valueArray.splice(index, 1);
-    setValueArray([newValueArray]);
-    console.log(valueArray);
+  const removeHandler = (value) => {
+    let newValueArray = valueArray.filter(
+      (singleValue) => singleValue !== value
+    );
+    setValueArray(newValueArray);
+    console.log("value:", value);
+    console.log("newValueArray:", newValueArray);
   };
 
   return (
@@ -23,7 +26,10 @@ function ValueDisplay({ valueArray, setValueArray }) {
                   {value.contentValue} g / 100g
                 </div>
                 <div className="dualBolusInfo">{value.dualBolus && "✨"}</div>
-                <button className="deleteButton" onClick={removeHandler}>
+                <button
+                  className="deleteButton"
+                  onClick={() => removeHandler(value)}
+                >
                   ❌
                 </button>
               </div>
