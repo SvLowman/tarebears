@@ -66,6 +66,11 @@ function ValueForm({ valueArray, setValueArray }) {
             ></input>
             <label htmlFor="dual-bolus">Dual-Bolus aktivieren</label>
           </div>
+          <label className="dual-bolus-container-custom">
+            <input type="checkbox"/>
+            <span className="checkmark"></span>
+            Dual-Bolus aktivieren
+          </label>
         </div>
         <button
           className="value-button"

@@ -34,3 +34,46 @@
 .value-button {
   box-shadow: 0 0 1rem var(--ter-bg-shade);
 }
+
+//CSS for custom checkbox
+.dual-bolus-container-custom label {
+  display: block;
+  position: relative;
+  user-select: none;
+}
+
+.dual-bolus-container-custom input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: green;
+}
+
+.checkmark:after {
+  position: absolute;
+  content: "";
+  display: none;
+}
+
+.dual-bolus-container-custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.dual-bolus-container-custom .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
