@@ -56,7 +56,7 @@ function ValueForm({ valueArray, setValueArray }) {
             required={true}
             onChange={contentValueHandler}
           ></input>
-          <div className="dual-bolus-container">
+          {/* <div className="dual-bolus-container">
             <input
               className="dual-bolus-checkbox"
               type="checkbox"
@@ -65,11 +65,16 @@ function ValueForm({ valueArray, setValueArray }) {
               onChange={dualBolusHandler}
             ></input>
             <label htmlFor="dual-bolus">Dual-Bolus aktivieren</label>
-          </div>
-          <label className="dual-bolus-container-custom">
-            <input type="checkbox"/>
+          </div> */}
+          <label className="dual-bolus-container-custom" htmlFor="dual-bolus">
+            <input
+              type="checkbox"
+              id="dual-bolus"
+              value={dualBolus}
+              onChange={dualBolusHandler}
+            />
             <span className="checkmark"></span>
-            Dual-Bolus aktivieren
+            <div className="checktext">Dual-Bolus aktivieren</div>
           </label>
         </div>
         <button

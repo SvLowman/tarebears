@@ -13,7 +13,7 @@
 .valueDisplayInfo {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .foodTypeInfo {
   font-weight: bold;
@@ -27,6 +27,11 @@
 }
 .dualBolusInfo {
   flex: 0;
+}
+
+.deleteButton {
+  font-size: 16px;
+  margin: 0 0 0 20px;
 }
 
 .resultSymbols {
