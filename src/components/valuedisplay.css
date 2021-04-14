@@ -10,6 +10,30 @@
   flex: 1;
 }
 
+.valueDisplayInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.foodTypeInfo {
+  font-weight: bold;
+  flex: 0;
+  white-space: nowrap;
+}
+.contentValueInfo {
+  flex: 1;
+  text-align: left;
+  margin: 0 20px;
+}
+.dualBolusInfo {
+  flex: 0;
+}
+
+.deleteButton {
+  font-size: 16px;
+  margin: 0 0 0 20px;
+}
+
 .resultSymbols {
   height: 5rem;
   display: flex;

@@ -12,11 +12,6 @@
   display: flex;
 }
 
-.buffer {
-  height: 1rem;
-  display: none;
-}
-
 .value-input {
   display: flex;
   align-items: center;
@@ -25,6 +20,64 @@
   box-shadow: 0 0 1rem var(--sec-bg-shade);
 }
 
+.dual-bolus-container {
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dual-bolus-checkbox {
+  flex: 0;
+  width: auto;
+}
+
 .value-button {
   box-shadow: 0 0 1rem var(--ter-bg-shade);
+}
+
+/* CSS for custom checkbox */
+.dual-bolus-container-custom {
+  display: block;
+  position: relative;
+  user-select: none;
+  margin: 16px;
+}
+
+.dual-bolus-container-custom input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkmark {
+  background: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  box-shadow: 0 0 1rem var(--sec-bg-shade);
+}
+
+.checkmark:after {
+  position: absolute;
+  content: "";
+  display: none;
+}
+
+.dual-bolus-container-custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.dual-bolus-container-custom .checkmark:after {
+  content: "✨";
+  margin-left: 2px;
+  color: var(--bg-red);
+}
+
+.checktext {
+  flex: 1;
+  text-align: right;
+  margin-top: 3px;
 }
