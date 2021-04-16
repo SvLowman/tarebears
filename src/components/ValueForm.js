@@ -33,6 +33,9 @@ function ValueForm({ valueArray, setValueArray }) {
       ...valueArray,
       { foodType: foodType, contentValue: contentValue, dualBolus: dualBolus },
     ]);
+    setFoodType("");
+    setContentValue("");
+    setDualBolus(false);
     console.log(valueArray);
   };
 
@@ -42,6 +45,7 @@ function ValueForm({ valueArray, setValueArray }) {
         <div className="value-input-container">
           <input
             className="value-input"
+            id="food-input"
             placeholder="Nahrungsmittel"
             type="text"
             value={foodType}
@@ -56,16 +60,6 @@ function ValueForm({ valueArray, setValueArray }) {
             required={true}
             onChange={contentValueHandler}
           ></input>
-          {/* <div className="dual-bolus-container">
-            <input
-              className="dual-bolus-checkbox"
-              type="checkbox"
-              id="dual-bolus"
-              value={dualBolus}
-              onChange={dualBolusHandler}
-            ></input>
-            <label htmlFor="dual-bolus">Dual-Bolus aktivieren</label>
-          </div> */}
           <label className="dual-bolus-container-custom" htmlFor="dual-bolus">
             <input
               type="checkbox"
