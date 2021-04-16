@@ -35,7 +35,6 @@ function ValueForm({ valueArray, setValueArray }) {
     ]);
     setFoodType("");
     setContentValue("");
-    setDualBolus(false);
     console.log(valueArray);
   };
 
