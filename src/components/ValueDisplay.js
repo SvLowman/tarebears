@@ -5,12 +5,10 @@ function ValueDisplay({ valueArray, setValueArray }) {
   console.log(valueArray);
 
   const removeHandler = (value) => {
-    let newValueArray = valueArray.filter(
-      (singleValue) => singleValue !== value
-    );
-    setValueArray(newValueArray);
-    console.log("value:", value);
-    console.log("newValueArray:", newValueArray);
+    let newArray = valueArray.filter((singleValue) => singleValue !== value);
+    console.log("newArray:", newArray, "value:", value);
+    setValueArray([newArray]);
+    localStorage.setItem("valueArray", JSON.stringify(valueArray));
   };
 
   return (
