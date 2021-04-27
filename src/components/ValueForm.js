@@ -23,16 +23,28 @@ function ValueForm({ valueArray, setValueArray }) {
     console.log(dualBolus);
   };
 
+  const addValueToArray = () => {
+    let value = {
+      foodType: foodType,
+      contentValue: contentValue,
+      dualBolus: dualBolus,
+    };
+    if (valueArray === null) {
+      setValueArray([value]);
+      localStorage.setItem("valueArray", JSON.stringify([]));
+    } else {
+      setValueArray([...valueArray, value]);
+    }
+    localStorage.setItem("valueArray", JSON.stringify(valueArray));
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
+    addValueToArray();
     // let currentValues = JSON.parse(localStorage.getItem("valuesArray") || []);
     // currentValues.push({ foodtype: foodType });
     // localStorage.setItem("valuesArray", JSON.stringify(currentValues));
     // console.log(currentValues);
-    setValueArray([
-      ...valueArray,
-      { foodType: foodType, contentValue: contentValue, dualBolus: dualBolus },
-    ]);
     setFoodType("");
     setContentValue("");
     console.log(valueArray);

@@ -6,7 +6,9 @@ import Footer from "../components/Footer";
 import "./valuepage.css";
 
 function ValuePage() {
-  const [valueArray, setValueArray] = useState([]);
+  const [valueArray, setValueArray] = useState(
+    JSON.parse(localStorage.getItem("valueArray"))
+  );
   return (
     <>
       <Header />
