@@ -1,8 +1,6 @@
 import { React, useState } from "react";
 import "./valueform.css";
 
-// localStorage.setItem("lastname", "Smith");
-
 function ValueForm({ valueArray, setValueArray }) {
   const [foodType, setFoodType] = useState("");
   const [contentValue, setContentValue] = useState("");
@@ -29,9 +27,9 @@ function ValueForm({ valueArray, setValueArray }) {
       contentValue: contentValue,
       dualBolus: dualBolus,
     };
-    if (valueArray === null) {
+    if (!valueArray || valueArray === null) {
       setValueArray([value]);
-      localStorage.setItem("valueArray", JSON.stringify([]));
+      localStorage.setItem("valueArray", JSON.stringify(valueArray));
     } else {
       setValueArray([...valueArray, value]);
     }
@@ -41,10 +39,6 @@ function ValueForm({ valueArray, setValueArray }) {
   const submitHandler = (e) => {
     e.preventDefault();
     addValueToArray();
-    // let currentValues = JSON.parse(localStorage.getItem("valuesArray") || []);
-    // currentValues.push({ foodtype: foodType });
-    // localStorage.setItem("valuesArray", JSON.stringify(currentValues));
-    // console.log(currentValues);
     setFoodType("");
     setContentValue("");
     console.log(valueArray);
