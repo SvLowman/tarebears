@@ -14,7 +14,7 @@ function ValuePage() {
       <Header />
       <div className="valueContainer">
         <ValueForm valueArray={valueArray} setValueArray={setValueArray} />
-        <ValueDisplay valueArray={valueArray} />
+        <ValueDisplay valueArray={valueArray} setValueArray={setValueArray} />
       </div>
       <Footer />
     </>
