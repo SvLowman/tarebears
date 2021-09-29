@@ -29,11 +29,14 @@ function ValueForm({ valueArray, setValueArray }) {
     };
     if (!valueArray || valueArray === null) {
       setValueArray([value]);
-      localStorage.setItem("valueArray", JSON.stringify(valueArray));
+      localStorage.setItem("valueArray", JSON.stringify([valueArray]));
     } else {
       setValueArray([...valueArray, value]);
+      localStorage.setItem(
+        "valueArray",
+        JSON.stringify([...valueArray, value])
+      );
     }
-    localStorage.setItem("valueArray", JSON.stringify(valueArray));
   };
 
   const submitHandler = (e) => {
