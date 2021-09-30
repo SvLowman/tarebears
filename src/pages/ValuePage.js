@@ -1,14 +1,11 @@
-import { React, useState } from "react";
+import { React } from "react";
 import Header from "../components/Header";
 import ValueForm from "../components/ValueForm";
 import ValueDisplay from "../components/ValueDisplay";
 import Footer from "../components/Footer";
 import "./valuepage.css";
 
-function ValuePage() {
-  const [valueArray, setValueArray] = useState(
-    JSON.parse(localStorage.getItem("valueArray"))
-  );
+function ValuePage({ valueArray, setValueArray }) {
   return (
     <>
       <Header />
