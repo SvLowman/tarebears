@@ -27,9 +27,10 @@ function ValueForm({ valueArray, setValueArray }) {
       contentValue: contentValue,
       dualBolus: dualBolus,
     };
-    if (!valueArray || valueArray === null) {
+    if (valueArray === null) {
       setValueArray([value]);
-      localStorage.setItem("valueArray", JSON.stringify([valueArray]));
+      console.log("valueArray:", [value]);
+      localStorage.setItem("valueArray", JSON.stringify([value]));
     } else {
       setValueArray([...valueArray, value]);
       localStorage.setItem(
