@@ -9,6 +9,9 @@ import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [splash, setSplash] = useState(true);
+  const [valueArray, setValueArray] = useState(
+    JSON.parse(localStorage.getItem("valueArray"))
+  );
 
   useEffect(() => {
     setTimeout(() => setSplash(false), 4000);
@@ -19,10 +22,14 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            {splash ? <SplashPage /> : <CalcPage />}
+            {splash ? (
+              <SplashPage />
+            ) : (
+              <CalcPage valueArray={valueArray} setValueArray={setValueArray} />
+            )}
           </Route>
           <Route path="/valuepage">
-            <ValuePage />
+            <ValuePage valueArray={valueArray} setValueArray={setValueArray} />
           </Route>
           <Route path="/about">
             <AboutPage />

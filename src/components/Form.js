@@ -2,7 +2,16 @@ import React from "react";
 import "./form.css";
 import "../assets/gumBear.png";
 
-function Form({ grams, setGrams, food, setFood, result, setResult }) {
+function Form({
+  grams,
+  setGrams,
+  food,
+  setFood,
+  result,
+  setResult,
+  valueArray,
+  setValueArray,
+}) {
   const gramsHandler = (e) => {
     setGrams(e.target.value);
     console.log(grams);
@@ -20,6 +29,8 @@ function Form({ grams, setGrams, food, setFood, result, setResult }) {
     // setGrams("");
     return result;
   };
+
+  console.log("valueArray:", valueArray);
 
   return (
     <>
@@ -39,10 +50,16 @@ function Form({ grams, setGrams, food, setFood, result, setResult }) {
           </div>
           <select className="select-css" onChange={foodHandler}>
             <option value="">Und wovon?</option>
-            <option value="0.75">Nudeln</option>
-            <option value="0.5">Weißbrot</option>
-            <option value="0.2">Reis</option>
-            <option value="0.13">Kartoffelpüree</option>
+            {valueArray &&
+              valueArray.map((value, index) => (
+                <option
+                  className="foodTypeOption"
+                  value={value.contentValue}
+                  key={index}
+                >
+                  {value.foodType}
+                </option>
+              ))}
           </select>
         </div>
         <button type="submit" onClick={submitHandler} name="amount">
