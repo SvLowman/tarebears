@@ -7,8 +7,9 @@ function ValueDisplay({ valueArray, setValueArray }) {
   const removeHandler = (value) => {
     let newArray = valueArray.filter((singleValue) => singleValue !== value);
     console.log("newArray:", newArray, "value:", value);
-    setValueArray([newArray]);
-    localStorage.setItem("valueArray", JSON.stringify(valueArray));
+    setValueArray(newArray);
+    localStorage.setItem("valueArray", JSON.stringify(newArray));
+    console.log("valueArray:", newArray);
   };
 
   return (
